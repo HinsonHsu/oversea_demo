@@ -9,7 +9,7 @@ public class MyBatisScannerConfig {
     @Bean
     public MapperScannerConfigurer MapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
-        mapperScannerConfigurer.setBasePackage("cn.focus.overseaapp.dao.mapper");
+        mapperScannerConfigurer.setBasePackage("cn.hinson.overseaapp.dao.mapper");
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         return mapperScannerConfigurer;
     }

@@ -11,8 +11,8 @@ address varchar(100),
 user_status int not null,
 create_time timestamp not null,
 update_time timestamp not null,
-submit_time timestamp,
-audit_time timestamp,
+submit_time timestamp null,
+audit_time timestamp null,
 auditor varchar(20)
 );
 

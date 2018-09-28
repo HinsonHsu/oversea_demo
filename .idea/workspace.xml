@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="071c946b-e753-4feb-95d8-a993d52f0d27" name="Default Changelist" comment="" />
+    <list default="true" id="071c946b-e753-4feb-95d8-a993d52f0d27" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +46,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="java" value="4207" />
+          <entry key="java" value="4537" />
           <entry key="sql" value="15" />
           <entry key="xml" value="1513" />
           <entry key="yml" value="107" />
@@ -51,7 +54,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4207" />
+          <entry key="JAVA" value="4537" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="SQL" value="23" />
           <entry key="XML" value="1505" />
@@ -121,10 +124,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resource/mysql.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
+                <state relative-caret-position="144">
                   <caret line="16" column="2" lean-forward="true" selection-start-line="2" selection-end-line="16" selection-end-column="2" />
                 </state>
               </provider>
@@ -133,8 +136,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/security/oauth2/OauthPrincipalExtractor.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
-                  <caret line="33" selection-start-line="33" selection-end-line="33" />
+                <state relative-caret-position="447">
+                  <caret line="42" column="84" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="42" selection-end-column="84" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -151,11 +154,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="392">
-                  <caret line="44" column="66" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="66" />
+                <state relative-caret-position="598">
+                  <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -188,7 +191,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/model/po/UserBase.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
+                <state relative-caret-position="74">
                   <caret line="27" column="32" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="32" />
                   <folding>
                     <element signature="e#1610#1611#0" expanded="true" />
@@ -225,9 +228,12 @@
       <find>Log</find>
       <find>selelect</find>
       <find>extrac</find>
-      <find>extractPrincipal</find>
       <find>extra</find>
+      <find>extractPrincipal</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -256,6 +262,7 @@
         <option value="$PROJECT_DIR$/src/main/java/cn/focus/overseaapp/security/oauth2/OauthPrincipalExtractor.java" />
         <option value="$PROJECT_DIR$/src/main/resource/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resource/mysql.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -266,11 +273,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="284" />
-    <option name="y" value="435" />
+    <option name="x" value="825" />
+    <option name="y" value="51" />
     <option name="width" value="1280" />
     <option name="height" value="712" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <flattenPackages ProjectPane="false" />
@@ -302,6 +310,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="overseaapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="overseaapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="overseaapp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="overseaapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="oauth2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="overseaapp" type="b2602c69:ProjectViewProjectNode" />
@@ -343,7 +367,7 @@
     <property name="SearchEverywhereHistoryKey" value="UserDetail&#9;FILE&#9;jar://C:/Users/xinshengshu/.m2/repository/org/springframework/security/spring-security-core/5.0.4.RELEASE/spring-security-core-5.0.4.RELEASE.jar!/org/springframework/security/provisioning/UserDetailsManager.class" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538132890782" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538133814083" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -369,7 +393,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.App (1)">
+    <configuration name="App (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="overseaapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.hinson.overseaapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="cn.hinson.overseaapp.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="overseaapp" />
       <extension name="coverage">
@@ -383,8 +420,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.App" />
+      <item itemvalue="Spring Boot.App (1)" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.App (1)" />
         <item itemvalue="Spring Boot.App" />
       </list>
     </recent_temporary>
@@ -400,17 +442,18 @@
       <option name="presentableId" value="Default" />
       <updated>1538022260367</updated>
       <workItem from="1538022264336" duration="13718000" />
-      <workItem from="1538117443785" duration="15429000" />
+      <workItem from="1538117443785" duration="16153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29147000" />
+    <option name="totallyTimeSpent" value="29871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2249467" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2249467" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -426,7 +469,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.1335505" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.21475054" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -627,16 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="44" column="66" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/model/dto/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-298">
@@ -659,7 +692,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/model/po/UserBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="74">
           <caret line="27" column="32" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="32" />
           <folding>
             <element signature="e#1610#1611#0" expanded="true" />
@@ -691,16 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/security/oauth2/OauthPrincipalExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
@@ -710,8 +733,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resource/mysql.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
+        <state relative-caret-position="144">
           <caret line="16" column="2" lean-forward="true" selection-start-line="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/security/oauth2/OauthPrincipalExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="42" column="84" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="42" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/hinson/overseaapp/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

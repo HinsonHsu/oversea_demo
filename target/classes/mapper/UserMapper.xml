@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.focus.overseaapp.dao.mapper.UserMapper">
-    <resultMap id="userBaseMap" type="cn.focus.overseaapp.model.po.UserBase">
+<mapper namespace="cn.hinson.overseaapp.dao.mapper.UserMapper">
+    <resultMap id="userBaseMap" type="cn.hinson.overseaapp.model.po.UserBase">
         <id property="uid" column="uid"/>
         <result property="username" column="user_name"/>
         <result property="userType" column="user_type"/>
@@ -17,19 +17,19 @@
         <result property="auditor" column="auditor"/>
     </resultMap>
 
-    <insert id="createUserBaseAndGetUid"  parameterType="cn.focus.overseaapp.model.po.UserBase" useGeneratedKeys="true" keyProperty="uid" keyColumn="uid" >
+    <insert id="createUserBaseAndGetUid"  parameterType="cn.hinson.overseaapp.model.po.UserBase" useGeneratedKeys="true" keyProperty="uid" keyColumn="uid" >
         insert into user_base(user_name, user_type, introduction, head_url, city_id, address, user_status, create_time, update_time)
          values (#{username}, #{userType}, #{introduction}, #{headUrl}, #{cityId}, #{address}, #{userStatus}, #{createTime}, #{updateTime});
     </insert>
 
-    <insert id="createLocalAccount" parameterType="cn.focus.overseaapp.model.po.LocalAccount">
+    <insert id="createLocalAccount" parameterType="cn.hinson.overseaapp.model.po.LocalAccount">
         insert into local_account(uid, email, pwd) values (#{uid}, #{email}, #{password});
     </insert>
 
-    <insert id="createOauthAccount" parameterType="cn.focus.overseaapp.model.po.OauthAccount">
+    <insert id="createOauthAccount" parameterType="cn.hinson.overseaapp.model.po.OauthAccount">
         insert into oauth_account(uid, oauth_source, oauth_id) values (#{uid}, #{oauthSource}, #{oauthId});
     </insert>
-    <select id="getLocalAccountByEmail" parameterType="String" resultType="cn.focus.overseaapp.model.po.LocalAccount">
+    <select id="getLocalAccountByEmail" parameterType="String" resultType="cn.hinson.overseaapp.model.po.LocalAccount">
         select uid, email, pwd as password from local_account
         where email = #{email};
     </select>

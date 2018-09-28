@@ -66,11 +66,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //            .and().exceptionHandling()
 //            .and().addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class)
 //            .formLogin();
-        httpSecurity.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+//        httpSecurity.csrf().csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+        //临时取消csrf，为了让postman访问
+        httpSecurity.csrf().disable();
         httpSecurity
             .antMatcher("/**")  //1
             .authorizeRequests()
-            .antMatchers("/", "/login**", "/webjars/**", "/error**", "/test").permitAll()  //2
+            .antMatchers("/", "/login**", "/webjars/**", "/error**", "/test", "/register").permitAll()  //2
             .anyRequest().authenticated()  //3
             .and().exceptionHandling()
             .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/"))  //4

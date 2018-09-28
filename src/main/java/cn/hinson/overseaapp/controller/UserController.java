@@ -2,12 +2,16 @@ package cn.hinson.overseaapp.controller;
 
 import cn.hinson.overseaapp.dao.mapper.UserMapper;
 import cn.hinson.overseaapp.enums.OauthType;
+import cn.hinson.overseaapp.model.dto.User;
 import cn.hinson.overseaapp.model.po.UserBase;
 import cn.hinson.overseaapp.service.UserService;
 import java.security.Principal;
+import java.sql.Timestamp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,8 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/")
 public class UserController {
-    @Autowired
-    UserMapper userMapper;
 
     @Autowired
     UserService userService;
@@ -26,6 +28,23 @@ public class UserController {
     public Principal getUser(Principal principal){
 
         return principal;
+    }
+
+    @PostMapping(value = "/register")
+    public String register(@RequestParam("email") String email, @RequestParam("password") String password) {
+        UserBase userBase = userService.getUserByEmail(email);
+        if(userBase != null) {
+            return "email已注册";
+        }else {
+            userBase = new UserBase();
+            userBase.setUsername(email + "_name");
+            userBase.setHeadUrl("tmp_url");
+            userBase.setCreateTime(new Timestamp(System.currentTimeMillis()));
+            userBase.setUpdateTime( new Timestamp(System.currentTimeMillis()));
+            userBase.setUserStatus(0);
+            int uid = userService.createUserWithEmail(userBase, email, password);
+            return "注册成功: " + userBase.getUsername();
+        }
     }
 
     @GetMapping(value = "/test")
