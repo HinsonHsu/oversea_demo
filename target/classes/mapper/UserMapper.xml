@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.focus.overseaapp.dao.mapper.UserMapper">
+    <resultMap id="userBaseMap" type="cn.focus.overseaapp.model.po.UserBase">
+        <id property="uid" column="uid"/>
+        <result property="username" column="user_name"/>
+        <result property="userType" column="user_type"/>
+        <result property="introduction" column="introduction"/>
+        <result property="headUrl" column="head_url"/>
+        <result property="cityId" column="city_id"/>
+        <result property="address" column="address"/>
+        <result property="userStatus" column="user_status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="submitTime" column="submit_time"/>
+        <result property="auditTime" column="audit_time"/>
+        <result property="auditor" column="auditor"/>
+    </resultMap>
+
+    <insert id="createUserBaseAndGetUid"  parameterType="cn.focus.overseaapp.model.po.UserBase" useGeneratedKeys="true" keyProperty="uid" keyColumn="uid" >
+        insert into user_base(user_name, user_type, introduction, head_url, city_id, address, user_status, create_time, update_time)
+         values (#{username}, #{userType}, #{introduction}, #{headUrl}, #{cityId}, #{address}, #{userStatus}, #{createTime}, #{updateTime});
+    </insert>
+
+    <insert id="createLocalAccount" parameterType="cn.focus.overseaapp.model.po.LocalAccount">
+        insert into local_account(uid, email, pwd) values (#{uid}, #{email}, #{password});
+    </insert>
+
+    <insert id="createOauthAccount" parameterType="cn.focus.overseaapp.model.po.OauthAccount">
+        insert into oauth_account(uid, oauth_source, oauth_id) values (#{uid}, #{oauthSource}, #{oauthId});
+    </insert>
+    <select id="getLocalAccountByEmail" parameterType="String" resultType="cn.focus.overseaapp.model.po.LocalAccount">
+        select uid, email, pwd as password from local_account
+        where email = #{email};
+    </select>
+
+    <select id="getUserBaseByUid" parameterType="String" resultMap="userBaseMap">
+        select user_name, user_type, introduction, head_url, city_id, address, user_status, create_time, update_time, submit_time, audit_time, auditor
+        from user_base
+        where uid = #{uid};
+    </select>
+
+    <select id="getUserBaseByOauth" resultMap="userBaseMap">
+        select user_name, user_type, introduction, head_url, city_id, address, user_status, create_time, update_time, submit_time, audit_time, auditor
+        from user_base
+        where uid = (
+        select uid from oauth_account where oauth_source =  #{oauthType} and oauth_id = #{oauthId}
+        );
+    </select>
+</mapper>
