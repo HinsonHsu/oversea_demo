@@ -72,7 +72,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity
             .antMatcher("/**")  //1
             .authorizeRequests()
-            .antMatchers("/", "/login**", "/webjars/**", "/error**", "/test", "/register").permitAll()  //2
+            .antMatchers("/", "/login**", "/webjars/**", "/error**", "/test", "/register", "/code", "/oauth").permitAll()  //2
             .anyRequest().authenticated()  //3
             .and().exceptionHandling()
             .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/"))  //4
